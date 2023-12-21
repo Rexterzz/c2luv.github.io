@@ -82,6 +82,25 @@
             color: #fff;
         }
 
+        .menu-btn {
+            cursor: pointer;
+            display: block;
+            font-size: 20px;
+            transition: color 0.3s ease; /* Added transition for menu icon color change */
+        }
+
+        .menu-btn span {
+            background-color: #fff; /* Set the initial color of menu icon bars */
+            display: block;
+            height: 3px;
+            margin: 6px 0;
+            transition: background-color 0.3s ease; /* Added transition for menu icon bars color change */
+        }
+
+        .menu-btn:hover span {
+            background-color: #000; /* Change the color on hover */
+        }
+
         #content {
             padding: 20px;
             transition: color 0.3s ease;
@@ -99,12 +118,6 @@
 
         #content .larger-text {
             display: block;
-            font-size: 20px;
-        }
-
-        .menu-btn {
-            cursor: pointer;
-            display: none;
             font-size: 20px;
         }
 
