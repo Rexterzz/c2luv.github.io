@@ -36,13 +36,18 @@
             color: transparent;
             padding: 10px;
             text-align: center;
-            transition: background-color 0.5s ease; 
+            transition: background-color 0.5s ease;
         }
 
         nav ul {
             list-style: none;
             margin: 0;
             padding: 0;
+            display: none; /* Hide the navigation menu by default */
+        }
+
+        nav.show ul {
+            display: block; /* Display the navigation menu when the 'show' class is present */
         }
 
         nav ul li {
@@ -86,20 +91,21 @@
             cursor: pointer;
             display: block;
             font-size: 20px;
-            transition: color 0.3s ease; 
+            transition: color 0.3s ease;
+            margin-right: 15px; /* Added margin for better spacing */
         }
 
         .menu-btn span {
             background-color: white;
             display: block;
-            width: 10px;
+            width: 30px;
             height: 3px;
             margin: 6px 0;
             transition: background-color 0.3s ease;
         }
 
         .menu-btn:hover span {
-            background-color:blue; 
+            background-color: blue;
         }
 
         #content {
@@ -168,12 +174,12 @@
         }
 
         @media only screen and (max-width: 600px) {
-            .menu-btn {
-                display: block;
+            nav ul {
+                display: none; /* Hide the navigation menu on small screens by default */
             }
 
-            nav ul {
-                display: none;
+            .menu-btn {
+                display: block;
             }
 
             nav.show ul {
